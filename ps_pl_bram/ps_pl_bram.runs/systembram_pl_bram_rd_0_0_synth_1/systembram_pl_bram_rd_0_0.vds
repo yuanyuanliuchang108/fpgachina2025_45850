@@ -1,0 +1,299 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Oct 31 19:57:59 2025
+# Process ID: 11676
+# Current directory: E:/ps_pl_bram/ps_pl_bram.runs/systembram_pl_bram_rd_0_0_synth_1
+# Command line: vivado.exe -log systembram_pl_bram_rd_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source systembram_pl_bram_rd_0_0.tcl
+# Log file: E:/ps_pl_bram/ps_pl_bram.runs/systembram_pl_bram_rd_0_0_synth_1/systembram_pl_bram_rd_0_0.vds
+# Journal file: E:/ps_pl_bram/ps_pl_bram.runs/systembram_pl_bram_rd_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source systembram_pl_bram_rd_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/ps_pl_bram/ip_repo/pl_bram_rd_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2020.2/data/ip'.
+Command: synth_design -top systembram_pl_bram_rd_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1508
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1151.969 ; gain = 4.570
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'systembram_pl_bram_rd_0_0' [d:/ps_pl_bram/ps_pl_bram.gen/sources_1/bd/systembram/ip/systembram_pl_bram_rd_0_0/synth/systembram_pl_bram_rd_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'pl_bram_rd_v1_0' [d:/ps_pl_bram/ps_pl_bram.gen/sources_1/bd/systembram/ipshared/9e8a/hdl/pl_bram_rd_v1_0.v:5]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'pl_bram_rd_v1_0_S00_AXI' [d:/ps_pl_bram/ps_pl_bram.gen/sources_1/bd/systembram/ipshared/9e8a/hdl/pl_bram_rd_v1_0_S00_AXI.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [d:/ps_pl_bram/ps_pl_bram.gen/sources_1/bd/systembram/ipshared/9e8a/hdl/pl_bram_rd_v1_0_S00_AXI.v:240]
+INFO: [Synth 8-226] default block is never used [d:/ps_pl_bram/ps_pl_bram.gen/sources_1/bd/systembram/ipshared/9e8a/hdl/pl_bram_rd_v1_0_S00_AXI.v:381]
+INFO: [Synth 8-6157] synthesizing module 'bram_rd' [d:/ps_pl_bram/ps_pl_bram.gen/sources_1/bd/systembram/ipshared/9e8a/src/bram_rd.v:3]
+	Parameter counter_width bound to: 16 - type: integer 
+	Parameter depth bound to: 4 - type: integer 
+	Parameter width bound to: 1024 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [d:/ps_pl_bram/ps_pl_bram.gen/sources_1/bd/systembram/ipshared/9e8a/src/bram_rd.v:140]
+INFO: [Synth 8-6155] done synthesizing module 'bram_rd' (1#1) [d:/ps_pl_bram/ps_pl_bram.gen/sources_1/bd/systembram/ipshared/9e8a/src/bram_rd.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'pl_bram_rd_v1_0_S00_AXI' (2#1) [d:/ps_pl_bram/ps_pl_bram.gen/sources_1/bd/systembram/ipshared/9e8a/hdl/pl_bram_rd_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'pl_bram_rd_v1_0' (3#1) [d:/ps_pl_bram/ps_pl_bram.gen/sources_1/bd/systembram/ipshared/9e8a/hdl/pl_bram_rd_v1_0.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'systembram_pl_bram_rd_0_0' (4#1) [d:/ps_pl_bram/ps_pl_bram.gen/sources_1/bd/systembram/ip/systembram_pl_bram_rd_0_0/synth/systembram_pl_bram_rd_0_0.v:57]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1246.492 ; gain = 99.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1246.492 ; gain = 99.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1246.492 ; gain = 99.094
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1246.492 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1317.844 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1317.879 ; gain = 0.035
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1317.879 ; gain = 170.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1317.879 ; gain = 170.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1317.879 ; gain = 170.480
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'flow_cnt_reg' in module 'bram_rd'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               00
+                 iSTATE0 |                              010 |                               01
+                 iSTATE1 |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'flow_cnt_reg' using encoding 'one-hot' in module 'bram_rd'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1317.879 ; gain = 170.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 4     
+	   2 Input   10 Bit       Adders := 4     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               17 Bit    Registers := 2     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 15    
++---RAMs : 
+	              16K Bit	(1024 X 16 bit)          RAMs := 4     
++---Muxes : 
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 3     
+	   4 Input   32 Bit        Muxes := 4     
+	   2 Input   17 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 2     
+	   3 Input    1 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/pl_bram_rd_v1_0_S00_AXI_inst/u_bram_rd/over_reg/Q' [d:/ps_pl_bram/ps_pl_bram.gen/sources_1/bd/systembram/ipshared/9e8a/src/bram_rd.v:217]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [d:/ps_pl_bram/ps_pl_bram.gen/sources_1/bd/systembram/ipshared/9e8a/src/bram_rd.v:217]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [d:/ps_pl_bram/ps_pl_bram.gen/sources_1/bd/systembram/ipshared/9e8a/src/bram_rd.v:217]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1317.879 ; gain = 170.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++--------------------------+----------------------------------------------------------------+-----------+----------------------+-----------------+
+|Module Name               | RTL Object                                                     | Inference | Size (Depth x Width) | Primitives      | 
++--------------------------+----------------------------------------------------------------+-----------+----------------------+-----------------+
+|systembram_pl_bram_rd_0_0 | inst/pl_bram_rd_v1_0_S00_AXI_inst/u_bram_rd/sketch_reg[2][797] | Implied   | 1 K x 16             | RAM256X1S x 64	 | 
+|systembram_pl_bram_rd_0_0 | inst/pl_bram_rd_v1_0_S00_AXI_inst/u_bram_rd/sketch_reg[3][797] | Implied   | 1 K x 16             | RAM256X1S x 64	 | 
+|systembram_pl_bram_rd_0_0 | inst/pl_bram_rd_v1_0_S00_AXI_inst/u_bram_rd/sketch_reg[0][797] | Implied   | 1 K x 16             | RAM256X1S x 64	 | 
+|systembram_pl_bram_rd_0_0 | inst/pl_bram_rd_v1_0_S00_AXI_inst/u_bram_rd/sketch_reg[1][797] | Implied   | 1 K x 16             | RAM256X1S x 64	 | 
++--------------------------+----------------------------------------------------------------+-----------+----------------------+-----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1317.879 ; gain = 170.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1317.879 ; gain = 170.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping	Report
++--------------------------+----------------------------------------------------------------+-----------+----------------------+-----------------+
+|Module Name               | RTL Object                                                     | Inference | Size (Depth x Width) | Primitives      | 
++--------------------------+----------------------------------------------------------------+-----------+----------------------+-----------------+
+|systembram_pl_bram_rd_0_0 | inst/pl_bram_rd_v1_0_S00_AXI_inst/u_bram_rd/sketch_reg[2][797] | Implied   | 1 K x 16             | RAM256X1S x 64	 | 
+|systembram_pl_bram_rd_0_0 | inst/pl_bram_rd_v1_0_S00_AXI_inst/u_bram_rd/sketch_reg[3][797] | Implied   | 1 K x 16             | RAM256X1S x 64	 | 
+|systembram_pl_bram_rd_0_0 | inst/pl_bram_rd_v1_0_S00_AXI_inst/u_bram_rd/sketch_reg[0][797] | Implied   | 1 K x 16             | RAM256X1S x 64	 | 
+|systembram_pl_bram_rd_0_0 | inst/pl_bram_rd_v1_0_S00_AXI_inst/u_bram_rd/sketch_reg[1][797] | Implied   | 1 K x 16             | RAM256X1S x 64	 | 
++--------------------------+----------------------------------------------------------------+-----------+----------------------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1328.926 ; gain = 181.527
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1336.992 ; gain = 189.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1336.992 ; gain = 189.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1336.992 ; gain = 189.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1336.992 ; gain = 189.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1336.992 ; gain = 189.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1336.992 ; gain = 189.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    49|
+|2     |LUT1      |    38|
+|3     |LUT2      |    41|
+|4     |LUT3      |    41|
+|5     |LUT4      |   122|
+|6     |LUT5      |    54|
+|7     |LUT6      |   154|
+|8     |RAM256X1S |   256|
+|9     |FDCE      |    37|
+|10    |FDPE      |     1|
+|11    |FDRE      |   173|
+|12    |FDSE      |     1|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1336.992 ; gain = 189.594
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 3 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1336.992 ; gain = 118.207
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1336.992 ; gain = 189.594
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1349.078 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 305 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1352.301 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 256 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 256 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 0 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1352.301 ; gain = 204.902
+INFO: [Common 17-1381] The checkpoint 'E:/ps_pl_bram/ps_pl_bram.runs/systembram_pl_bram_rd_0_0_synth_1/systembram_pl_bram_rd_0_0.dcp' has been generated.
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+INFO: [Common 17-1381] The checkpoint 'E:/ps_pl_bram/ps_pl_bram.runs/systembram_pl_bram_rd_0_0_synth_1/systembram_pl_bram_rd_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file systembram_pl_bram_rd_0_0_utilization_synth.rpt -pb systembram_pl_bram_rd_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 31 19:58:25 2025...

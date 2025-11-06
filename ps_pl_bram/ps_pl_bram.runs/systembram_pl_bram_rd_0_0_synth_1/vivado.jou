@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Oct 31 19:57:59 2025
+# Process ID: 11676
+# Current directory: E:/ps_pl_bram/ps_pl_bram.runs/systembram_pl_bram_rd_0_0_synth_1
+# Command line: vivado.exe -log systembram_pl_bram_rd_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source systembram_pl_bram_rd_0_0.tcl
+# Log file: E:/ps_pl_bram/ps_pl_bram.runs/systembram_pl_bram_rd_0_0_synth_1/systembram_pl_bram_rd_0_0.vds
+# Journal file: E:/ps_pl_bram/ps_pl_bram.runs/systembram_pl_bram_rd_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source systembram_pl_bram_rd_0_0.tcl -notrace

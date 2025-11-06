@@ -1,0 +1,566 @@
+20:06:20 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\vitisspace\temp_xsdb_launch_script.tcl
+20:06:20 INFO  : Registering command handlers for Vitis TCF services
+20:06:22 INFO  : Platform repository initialization has completed.
+20:06:22 INFO  : XSCT server has started successfully.
+20:06:22 INFO  : plnx-install-location is set to ''
+20:06:22 INFO  : Successfully done setting XSCT server connection channel  
+20:06:22 INFO  : Successfully done query RDI_DATADIR 
+20:06:22 INFO  : Successfully done setting workspace for the tool. 
+20:07:01 INFO  : Result from executing command 'getProjects': gengxin2
+20:07:01 INFO  : Result from executing command 'getPlatforms': 
+20:07:01 WARN  : An unexpected exception occurred in the module 'platform project logging'
+20:07:01 INFO  : Platform 'gengxin2' is added to custom repositories.
+20:07:06 INFO  : Platform 'gengxin2' is added to custom repositories.
+20:07:39 INFO  : Result from executing command 'getProjects': gengxin2
+20:07:39 INFO  : Result from executing command 'getPlatforms': gengxin2|E:/vitisspace/gengxin2/export/gengxin2/gengxin2.xpfm
+20:07:40 INFO  : Checking for BSP changes to sync application flags for project 'gengxin'...
+20:08:00 INFO  : Checking for BSP changes to sync application flags for project 'gengxin'...
+20:08:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:08:25 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+20:08:25 INFO  : 'jtag frequency' command is executed.
+20:08:25 INFO  : Context for 'APU' is selected.
+20:08:25 INFO  : System reset is completed.
+20:08:28 INFO  : 'after 3000' command is executed.
+20:08:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}' command is executed.
+20:08:30 INFO  : Device configured successfully with "E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit"
+20:08:30 INFO  : Context for 'APU' is selected.
+20:08:30 INFO  : Hardware design and registers information is loaded from 'E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa'.
+20:08:30 INFO  : 'configparams force-mem-access 1' command is executed.
+20:08:30 INFO  : Context for 'APU' is selected.
+20:08:30 INFO  : Sourcing of 'E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl' is done.
+20:08:31 INFO  : 'ps7_init' command is executed.
+20:08:31 INFO  : 'ps7_post_config' command is executed.
+20:08:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:08:31 INFO  : The application 'E:/vitisspace/gengxin/Debug/gengxin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:08:31 INFO  : 'configparams force-mem-access 0' command is executed.
+20:08:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}
+fpga -file E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/vitisspace/gengxin/Debug/gengxin.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:08:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:08:31 INFO  : 'con' command is executed.
+20:08:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:08:31 INFO  : Launch script is exported to file 'E:\vitisspace\gengxin_system\_ide\scripts\debugger_gengxin-default.tcl'
+20:12:30 INFO  : Disconnected from the channel tcfchan#2.
+20:12:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:12:32 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+20:12:32 INFO  : 'jtag frequency' command is executed.
+20:12:32 INFO  : Context for 'APU' is selected.
+20:12:32 INFO  : System reset is completed.
+20:12:35 INFO  : 'after 3000' command is executed.
+20:12:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}' command is executed.
+20:12:37 INFO  : Device configured successfully with "E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit"
+20:12:37 INFO  : Context for 'APU' is selected.
+20:12:37 INFO  : Hardware design and registers information is loaded from 'E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa'.
+20:12:37 INFO  : 'configparams force-mem-access 1' command is executed.
+20:12:37 INFO  : Context for 'APU' is selected.
+20:12:37 INFO  : Sourcing of 'E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl' is done.
+20:12:37 INFO  : 'ps7_init' command is executed.
+20:12:37 INFO  : 'ps7_post_config' command is executed.
+20:12:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:12:37 INFO  : The application 'E:/vitisspace/gengxin/Debug/gengxin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:12:37 INFO  : 'configparams force-mem-access 0' command is executed.
+20:12:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}
+fpga -file E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/vitisspace/gengxin/Debug/gengxin.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:12:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:12:37 INFO  : 'con' command is executed.
+20:12:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:12:37 INFO  : Launch script is exported to file 'E:\vitisspace\gengxin_system\_ide\scripts\debugger_gengxin-default.tcl'
+20:13:56 INFO  : Disconnected from the channel tcfchan#3.
+20:13:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:13:57 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+20:13:57 INFO  : 'jtag frequency' command is executed.
+20:13:57 INFO  : Context for 'APU' is selected.
+20:13:57 INFO  : System reset is completed.
+20:14:00 INFO  : 'after 3000' command is executed.
+20:14:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}' command is executed.
+20:14:02 INFO  : Device configured successfully with "E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit"
+20:14:02 INFO  : Context for 'APU' is selected.
+20:14:02 INFO  : Hardware design and registers information is loaded from 'E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa'.
+20:14:02 INFO  : 'configparams force-mem-access 1' command is executed.
+20:14:02 INFO  : Context for 'APU' is selected.
+20:14:02 INFO  : Sourcing of 'E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl' is done.
+20:14:02 INFO  : 'ps7_init' command is executed.
+20:14:02 INFO  : 'ps7_post_config' command is executed.
+20:14:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:14:02 INFO  : The application 'E:/vitisspace/gengxin/Debug/gengxin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:14:03 INFO  : 'configparams force-mem-access 0' command is executed.
+20:14:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}
+fpga -file E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/vitisspace/gengxin/Debug/gengxin.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:14:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:14:03 INFO  : 'con' command is executed.
+20:14:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:14:03 INFO  : Launch script is exported to file 'E:\vitisspace\gengxin_system\_ide\scripts\debugger_gengxin-default.tcl'
+20:32:30 INFO  : Checking for BSP changes to sync application flags for project 'gengxin'...
+20:32:36 INFO  : Disconnected from the channel tcfchan#4.
+20:32:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:32:37 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+20:32:37 INFO  : 'jtag frequency' command is executed.
+20:32:37 INFO  : Context for 'APU' is selected.
+20:32:37 INFO  : System reset is completed.
+20:32:40 INFO  : 'after 3000' command is executed.
+20:32:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}' command is executed.
+20:32:42 INFO  : Device configured successfully with "E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit"
+20:32:42 INFO  : Context for 'APU' is selected.
+20:32:42 INFO  : Hardware design and registers information is loaded from 'E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa'.
+20:32:42 INFO  : 'configparams force-mem-access 1' command is executed.
+20:32:42 INFO  : Context for 'APU' is selected.
+20:32:42 INFO  : Sourcing of 'E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl' is done.
+20:32:42 INFO  : 'ps7_init' command is executed.
+20:32:42 INFO  : 'ps7_post_config' command is executed.
+20:32:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:32:42 INFO  : The application 'E:/vitisspace/gengxin/Debug/gengxin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:32:42 INFO  : 'configparams force-mem-access 0' command is executed.
+20:32:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}
+fpga -file E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/vitisspace/gengxin/Debug/gengxin.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:32:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:32:42 INFO  : 'con' command is executed.
+20:32:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:32:42 INFO  : Launch script is exported to file 'E:\vitisspace\gengxin_system\_ide\scripts\debugger_gengxin-default.tcl'
+20:34:07 INFO  : Checking for BSP changes to sync application flags for project 'gengxin'...
+20:34:56 INFO  : Disconnected from the channel tcfchan#5.
+20:34:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:34:57 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+20:34:57 INFO  : 'jtag frequency' command is executed.
+20:34:57 INFO  : Context for 'APU' is selected.
+20:34:57 INFO  : System reset is completed.
+20:35:00 INFO  : 'after 3000' command is executed.
+20:35:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}' command is executed.
+20:35:02 INFO  : Device configured successfully with "E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit"
+20:35:02 INFO  : Context for 'APU' is selected.
+20:35:02 INFO  : Hardware design and registers information is loaded from 'E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa'.
+20:35:02 INFO  : 'configparams force-mem-access 1' command is executed.
+20:35:02 INFO  : Context for 'APU' is selected.
+20:35:02 INFO  : Sourcing of 'E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl' is done.
+20:35:02 INFO  : 'ps7_init' command is executed.
+20:35:02 INFO  : 'ps7_post_config' command is executed.
+20:35:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:35:02 INFO  : The application 'E:/vitisspace/gengxin/Debug/gengxin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:35:02 INFO  : 'configparams force-mem-access 0' command is executed.
+20:35:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}
+fpga -file E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/vitisspace/gengxin/Debug/gengxin.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:35:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:35:02 INFO  : 'con' command is executed.
+20:35:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:35:02 INFO  : Launch script is exported to file 'E:\vitisspace\gengxin_system\_ide\scripts\debugger_gengxin-default.tcl'
+20:36:37 INFO  : Checking for BSP changes to sync application flags for project 'gengxin'...
+20:36:43 INFO  : Disconnected from the channel tcfchan#6.
+20:36:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:36:44 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+20:36:44 INFO  : 'jtag frequency' command is executed.
+20:36:44 INFO  : Context for 'APU' is selected.
+20:36:44 INFO  : System reset is completed.
+20:36:47 INFO  : 'after 3000' command is executed.
+20:36:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}' command is executed.
+20:36:49 INFO  : Device configured successfully with "E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit"
+20:36:49 INFO  : Context for 'APU' is selected.
+20:36:49 INFO  : Hardware design and registers information is loaded from 'E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa'.
+20:36:49 INFO  : 'configparams force-mem-access 1' command is executed.
+20:36:49 INFO  : Context for 'APU' is selected.
+20:36:49 INFO  : Sourcing of 'E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl' is done.
+20:36:49 INFO  : 'ps7_init' command is executed.
+20:36:49 INFO  : 'ps7_post_config' command is executed.
+20:36:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:36:49 INFO  : The application 'E:/vitisspace/gengxin/Debug/gengxin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:36:49 INFO  : 'configparams force-mem-access 0' command is executed.
+20:36:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}
+fpga -file E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/vitisspace/gengxin/Debug/gengxin.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:36:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:36:49 INFO  : 'con' command is executed.
+20:36:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:36:49 INFO  : Launch script is exported to file 'E:\vitisspace\gengxin_system\_ide\scripts\debugger_gengxin-default.tcl'
+20:38:06 INFO  : Checking for BSP changes to sync application flags for project 'gengxin'...
+20:38:32 INFO  : Disconnected from the channel tcfchan#7.
+20:38:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:38:33 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+20:38:33 INFO  : 'jtag frequency' command is executed.
+20:38:33 INFO  : Context for 'APU' is selected.
+20:38:33 INFO  : System reset is completed.
+20:38:36 INFO  : 'after 3000' command is executed.
+20:38:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}' command is executed.
+20:38:38 INFO  : Device configured successfully with "E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit"
+20:38:38 INFO  : Context for 'APU' is selected.
+20:38:38 INFO  : Hardware design and registers information is loaded from 'E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa'.
+20:38:38 INFO  : 'configparams force-mem-access 1' command is executed.
+20:38:38 INFO  : Context for 'APU' is selected.
+20:38:38 INFO  : Sourcing of 'E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl' is done.
+20:38:38 INFO  : 'ps7_init' command is executed.
+20:38:38 INFO  : 'ps7_post_config' command is executed.
+20:38:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:38:38 INFO  : The application 'E:/vitisspace/gengxin/Debug/gengxin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:38:39 INFO  : 'configparams force-mem-access 0' command is executed.
+20:38:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}
+fpga -file E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/vitisspace/gengxin/Debug/gengxin.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:38:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:38:39 INFO  : 'con' command is executed.
+20:38:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:38:39 INFO  : Launch script is exported to file 'E:\vitisspace\gengxin_system\_ide\scripts\debugger_gengxin-default.tcl'
+20:39:25 INFO  : Checking for BSP changes to sync application flags for project 'gengxin'...
+20:39:32 INFO  : Disconnected from the channel tcfchan#8.
+20:39:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:39:33 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+20:39:33 INFO  : 'jtag frequency' command is executed.
+20:39:33 INFO  : Context for 'APU' is selected.
+20:39:33 INFO  : System reset is completed.
+20:39:36 INFO  : 'after 3000' command is executed.
+20:39:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}' command is executed.
+20:39:38 INFO  : Device configured successfully with "E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit"
+20:39:38 INFO  : Context for 'APU' is selected.
+20:39:38 INFO  : Hardware design and registers information is loaded from 'E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa'.
+20:39:38 INFO  : 'configparams force-mem-access 1' command is executed.
+20:39:38 INFO  : Context for 'APU' is selected.
+20:39:38 INFO  : Sourcing of 'E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl' is done.
+20:39:38 INFO  : 'ps7_init' command is executed.
+20:39:38 INFO  : 'ps7_post_config' command is executed.
+20:39:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:39:38 INFO  : The application 'E:/vitisspace/gengxin/Debug/gengxin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:39:38 INFO  : 'configparams force-mem-access 0' command is executed.
+20:39:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}
+fpga -file E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/vitisspace/gengxin/Debug/gengxin.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:39:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:39:38 INFO  : 'con' command is executed.
+20:39:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:39:38 INFO  : Launch script is exported to file 'E:\vitisspace\gengxin_system\_ide\scripts\debugger_gengxin-default.tcl'
+20:40:45 INFO  : Disconnected from the channel tcfchan#9.
+11:11:19 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\vitisspace\temp_xsdb_launch_script.tcl
+11:11:22 INFO  : XSCT server has started successfully.
+11:11:22 INFO  : plnx-install-location is set to ''
+11:11:22 INFO  : Successfully done setting XSCT server connection channel  
+11:11:22 INFO  : Successfully done setting workspace for the tool. 
+11:11:23 INFO  : Platform repository initialization has completed.
+11:11:24 INFO  : Registering command handlers for Vitis TCF services
+11:11:28 INFO  : Successfully done query RDI_DATADIR 
+11:12:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:12:46 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+11:12:46 INFO  : 'jtag frequency' command is executed.
+11:12:46 INFO  : Context for 'APU' is selected.
+11:12:46 INFO  : System reset is completed.
+11:12:49 INFO  : 'after 3000' command is executed.
+11:12:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}' command is executed.
+11:12:51 INFO  : Device configured successfully with "E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit"
+11:12:51 INFO  : Context for 'APU' is selected.
+11:12:51 INFO  : Hardware design and registers information is loaded from 'E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa'.
+11:12:51 INFO  : 'configparams force-mem-access 1' command is executed.
+11:12:51 INFO  : Context for 'APU' is selected.
+11:12:51 INFO  : Sourcing of 'E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl' is done.
+11:12:51 ERROR : Invalid context
+11:12:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}
+fpga -file E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+11:12:51 ERROR : Invalid context
+11:12:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:12:58 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+11:12:58 INFO  : 'jtag frequency' command is executed.
+11:12:58 INFO  : Context for 'APU' is selected.
+11:12:58 INFO  : System reset is completed.
+11:13:01 INFO  : 'after 3000' command is executed.
+11:13:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}' command is executed.
+11:13:03 INFO  : Device configured successfully with "E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit"
+11:13:03 INFO  : Context for 'APU' is selected.
+11:13:03 INFO  : Hardware design and registers information is loaded from 'E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa'.
+11:13:03 INFO  : 'configparams force-mem-access 1' command is executed.
+11:13:03 INFO  : Context for 'APU' is selected.
+11:13:03 INFO  : Sourcing of 'E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl' is done.
+11:13:03 INFO  : 'ps7_init' command is executed.
+11:13:03 INFO  : 'ps7_post_config' command is executed.
+11:13:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:13:03 INFO  : The application 'E:/vitisspace/gengxin/Debug/gengxin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:13:03 INFO  : 'configparams force-mem-access 0' command is executed.
+11:13:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}
+fpga -file E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/vitisspace/gengxin/Debug/gengxin.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:13:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:13:03 INFO  : 'con' command is executed.
+11:13:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:13:03 INFO  : Launch script is exported to file 'E:\vitisspace\gengxin_system\_ide\scripts\debugger_gengxin-default.tcl'
+11:13:20 INFO  : Disconnected from the channel tcfchan#1.
+11:13:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:13:21 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+11:13:21 INFO  : 'jtag frequency' command is executed.
+11:13:21 INFO  : Context for 'APU' is selected.
+11:13:22 INFO  : System reset is completed.
+11:13:25 INFO  : 'after 3000' command is executed.
+11:13:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}' command is executed.
+11:13:26 INFO  : Device configured successfully with "E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit"
+11:13:26 INFO  : Context for 'APU' is selected.
+11:13:27 INFO  : Hardware design and registers information is loaded from 'E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa'.
+11:13:27 INFO  : 'configparams force-mem-access 1' command is executed.
+11:13:27 INFO  : Context for 'APU' is selected.
+11:13:27 INFO  : Sourcing of 'E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl' is done.
+11:13:27 INFO  : 'ps7_init' command is executed.
+11:13:27 INFO  : 'ps7_post_config' command is executed.
+11:13:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:13:28 INFO  : The application 'E:/vitisspace/gengxin/Debug/gengxin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:13:28 INFO  : 'configparams force-mem-access 0' command is executed.
+11:13:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}
+fpga -file E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/vitisspace/gengxin/Debug/gengxin.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:13:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:13:28 INFO  : 'con' command is executed.
+11:13:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:13:28 INFO  : Launch script is exported to file 'E:\vitisspace\gengxin_system\_ide\scripts\debugger_gengxin-default.tcl'
+12:27:22 INFO  : Disconnected from the channel tcfchan#2.
+12:27:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:27:23 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+12:27:23 INFO  : 'jtag frequency' command is executed.
+12:27:23 INFO  : Context for 'APU' is selected.
+12:27:23 INFO  : System reset is completed.
+12:27:26 INFO  : 'after 3000' command is executed.
+12:27:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}' command is executed.
+12:27:28 INFO  : Device configured successfully with "E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit"
+12:27:28 INFO  : Context for 'APU' is selected.
+12:27:29 INFO  : Hardware design and registers information is loaded from 'E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa'.
+12:27:29 INFO  : 'configparams force-mem-access 1' command is executed.
+12:27:29 INFO  : Context for 'APU' is selected.
+12:27:29 INFO  : Sourcing of 'E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl' is done.
+12:27:29 INFO  : 'ps7_init' command is executed.
+12:27:29 INFO  : 'ps7_post_config' command is executed.
+12:27:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:27:29 INFO  : The application 'E:/vitisspace/gengxin/Debug/gengxin.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:27:29 INFO  : 'configparams force-mem-access 0' command is executed.
+12:27:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-13722093-0"}
+fpga -file E:/vitisspace/gengxin/_ide/bitstream/gengxin2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw E:/vitisspace/gengxin2/export/gengxin2/hw/gengxin2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source E:/vitisspace/gengxin/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow E:/vitisspace/gengxin/Debug/gengxin.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:27:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:27:29 INFO  : 'con' command is executed.
+12:27:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:27:29 INFO  : Launch script is exported to file 'E:\vitisspace\gengxin_system\_ide\scripts\debugger_gengxin-default.tcl'
+01:00:25 INFO  : Launching XSCT server: xsct.bat -n  -interactive E:\vitisspace\temp_xsdb_launch_script.tcl

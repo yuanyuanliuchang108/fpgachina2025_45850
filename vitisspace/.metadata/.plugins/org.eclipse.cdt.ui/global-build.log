@@ -1,0 +1,36 @@
+Nothing to build in platform 'gengxin2'
+
+20:39:25 **** Incremental Build of configuration Debug for project gengxin ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IE:/vitisspace/gengxin2/export/gengxin2/sw/gengxin2/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'uart_intr_handler':
+../src/helloworld.c:235:61: warning: multi-character character constant [-Wmultichar]
+  235 |                   XUartPs_SendByte(XPAR_PS7_UART_0_BASEADDR,'  ');
+      |                                                             ^~~~
+../src/helloworld.c:235:61: warning: unsigned conversion from 'int' to 'u8' {aka 'unsigned char'} changes value from '8224' to '32' [-Woverflow]
+../src/helloworld.c:243:61: warning: multi-character character constant [-Wmultichar]
+  243 |                   XUartPs_SendByte(XPAR_PS7_UART_0_BASEADDR,'  ');
+      |                                                             ^~~~
+../src/helloworld.c:243:61: warning: unsigned conversion from 'int' to 'u8' {aka 'unsigned char'} changes value from '8224' to '32' [-Woverflow]
+../src/helloworld.c:149:16: warning: unused variable 'temp' [-Wunused-variable]
+  149 |   unsigned int temp=0;
+      |                ^~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: gengxin.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LE:/vitisspace/gengxin2/export/gengxin2/sw/gengxin2/standalone_ps7_cortexa9_0/bsplib/lib -o "gengxin.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gengxin.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size gengxin.elf  |tee "gengxin.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79412	   3374	  23248	 106034	  19e32	gengxin.elf
+'Finished building: gengxin.elf.size'
+' '

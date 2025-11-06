@@ -1,0 +1,7 @@
+/*gengxin2*/
+the_ROM_image:
+{
+  [bootloader]<gengxin2/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}
